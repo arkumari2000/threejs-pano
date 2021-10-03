@@ -4,7 +4,7 @@ const SPEED_FACTOR = 0.01;
 
 export class CameraMouseControls {
   private _camera: THREE.Camera;
-  private _canvas: HTMLCanvasElement;
+  private _canvas: HTMLCanvasElement ;
   private _mousePressed: boolean;
   private _rpy: THREE.Vector3;
 

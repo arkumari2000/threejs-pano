@@ -8,10 +8,8 @@ export const GetMesh = (imageUrl: string) => {
 
     const material = new THREE.MeshBasicMaterial( {
         map: loader.load(imageUrl),
-        color: 0xffffff, 
-        alphaTest: 0,
-        visible: true,
-        side: THREE.BackSide
+        side: THREE.DoubleSide,
+        opacity: 0.5,
     } );
     
     const sphereMesh = new THREE.Mesh(geometry, material);
