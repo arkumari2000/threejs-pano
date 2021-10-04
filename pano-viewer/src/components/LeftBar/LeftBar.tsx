@@ -4,7 +4,7 @@ import './styles.css';
 
 export const LeftBar = () => {
   return (
-    <div className='left-wrapper' role='left-bar'>
+    <div className='left-wrapper' >
       <div className='bottom-bar'>
         <div className='button'>
           {/* <ion-icon name='reorder-four-outline' size='large' role='reorder'></ion-icon> */}
