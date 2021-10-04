@@ -7,6 +7,8 @@ import { BottomBar } from '../BottomBar/BottomBar';
 import { LeftBar } from '../LeftBar/LeftBar';
 import { ZoomBar } from '../ZoomBar/ZoomBar';
 
+import './styles.css'
+
 export const PanoViewer = () => {
   useLayoutEffect(() => {
     const canvas = document.querySelector('#sphere-inside');
@@ -16,7 +18,7 @@ export const PanoViewer = () => {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(75, 2, 0.01, 1000);
-    camera.position.y = 10;
+    camera.position.z = 100;
 
     new CameraMouseControls(camera, canvas as HTMLCanvasElement)
 
@@ -32,7 +34,7 @@ export const PanoViewer = () => {
   }, []);
 
   return (
-    <div>
+    <div id='pano-viewer'>
       <canvas
         id='sphere-inside'
         style={{ display: 'block', width: '100%', height: '100%' }}

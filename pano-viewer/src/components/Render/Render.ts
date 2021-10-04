@@ -14,9 +14,6 @@ export function RenderMesh(
       resetCameraAspectRatio(renderer, camera);
     }
 
-    Mesh.rotation.x = time;
-    Mesh.rotation.y = time / 2;
-
     renderer.render(scene, camera);
 
     requestAnimationFrame(render);
