@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from 'react';
 import { BottomBar } from '../BottomBar/BottomBar';
 import { LeftBar } from '../LeftBar/LeftBar';
 import { ZoomBar } from '../ZoomBar/ZoomBar';
-import { init, animate } from '../ThreeCanvas/ThreeCanvas';
+import { init, animate } from '../Threejs/Threejs';
 
 import './styles.css'
 

@@ -8,6 +8,6 @@
     pointer-events: none;
 }
 
-.zoom-wrapper .button{
-    float: left;
+.zoom-bar{
+    display: flex;
 }
