@@ -100,7 +100,7 @@ export function onPointerDown(event: any) {
   document.addEventListener('pointerup', onPointerUp);
 }
 
-function onPointerMove(event: any) {
+export function onPointerMove(event: any) {
   if (event.isPrimary === false) return;
 
   lon = (onPointerDownMouseX - event.clientX) * 0.1 + onPointerDownLon;
