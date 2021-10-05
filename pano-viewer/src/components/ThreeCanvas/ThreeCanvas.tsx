@@ -7,14 +7,12 @@ interface Props {
   scene: any;
   camera: THREE.PerspectiveCamera;
   onUpdate?: () => void;
-  onContextMenu?: () => void;
 }
 
 export const ThreeCanvas: React.FC<Props> = ({
   scene,
   camera,
-  onUpdate,
-  onContextMenu,
+  onUpdate
 }) => {
   // debug info, will keep this react becomes stable
   useCountRenders('ThreeCanvas');
