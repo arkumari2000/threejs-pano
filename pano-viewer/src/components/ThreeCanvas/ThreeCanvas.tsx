@@ -1,10 +1,10 @@
-import React, { useRef, useLayoutEffect } from "react";
-import * as THREE from "three";
-import { initDefaultControls } from "../Controls/DefaultControls";
-import { useCountRenders } from "../../hooks/useCountRenders";
+import React, { useRef, useLayoutEffect } from 'react';
+import * as THREE from 'three';
+import { initDefaultControls } from '../Controls/DefaultControls';
+import { useCountRenders } from '../../hooks/useCountRenders';
 
 interface Props {
-  scene: THREE.Scene;
+  scene: any;
   camera: THREE.PerspectiveCamera;
   onUpdate?: () => void;
   onContextMenu?: () => void;
@@ -17,13 +17,16 @@ export const ThreeCanvas: React.FC<Props> = ({
   onContextMenu,
 }) => {
   // debug info, will keep this react becomes stable
-  useCountRenders("ThreeCanvas");
+  useCountRenders('ThreeCanvas');
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useLayoutEffect(() => {
     const renderer = new THREE.WebGLRenderer({
-      canvas: canvasRef.current as HTMLCanvasElement | THREE.OffscreenCanvas | undefined,
+      canvas: canvasRef.current as
+        | HTMLCanvasElement
+        | THREE.OffscreenCanvas
+        | undefined,
     });
 
     const disposeControls = initDefaultControls(canvasRef.current, camera);
@@ -50,7 +53,7 @@ export const ThreeCanvas: React.FC<Props> = ({
     <>
       <canvas
         ref={canvasRef}
-        style={{ display: "block", width: "100%", height: "100vh" }}
+        style={{ display: 'block', width: '100%', height: '100vh' }}
         width={1920}
         height={1080}
       ></canvas>
