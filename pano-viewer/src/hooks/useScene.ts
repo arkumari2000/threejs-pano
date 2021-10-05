@@ -10,7 +10,7 @@ export const useScene = () => {
     1100
   );
   useEffect(() => {
-    camera.rotation.y = (3 * Math.PI) / 2;
+    camera.rotation.y = Math.PI;
     camera.rotation.z = Math.PI;
 
     const sphere = createSphereMesh(
