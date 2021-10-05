@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import * as THREE from "three";
 import { initDefaultControls } from "../Controls/DefaultControls";
 import { useCountRenders } from "../../hooks/useCountRenders";
@@ -10,8 +10,6 @@ interface Props {
   onContextMenu?: () => void;
 }
 
-// A responsive Three.js scene rendering canvas with default controls
-// Default controls is an added responsibility, will remove it when a better design is identified
 export const ThreeCanvas: React.FC<Props> = ({
   scene,
   camera,
@@ -28,7 +26,7 @@ export const ThreeCanvas: React.FC<Props> = ({
       canvas: canvasRef.current as HTMLCanvasElement | THREE.OffscreenCanvas | undefined,
     });
 
-    // const disposeControls = initDefaultControls(canvasRef.current, camera);
+    const disposeControls = initDefaultControls(canvasRef.current, camera);
 
     const animate = () => {
       if (resizeRenderer(renderer)) {
@@ -44,16 +42,9 @@ export const ThreeCanvas: React.FC<Props> = ({
 
     animate();
     return () => {
-      // disposeControls();
+      disposeControls();
     };
   }, []);
-
-  // useEffect(() => {
-  //   canvasRef.current.addEventListener("contextmenu", onContextMenu);
-  //   return () => {
-  //     canvasRef.current.removeEventListener("contextmenu", onContextMenu);
-  //   };
-  // }, [onContextMenu]);
 
   return (
     <>
