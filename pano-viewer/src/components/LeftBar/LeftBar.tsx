@@ -1,29 +1,19 @@
 import React from 'react';
-import { Icon } from '@material-ui/core';
-import {
-  DehazeSharp,
-  DomainSharp,
-  InfoSharp,
-  ShareSharp,
-} from '@material-ui/icons';
 
 import './styles.css';
 
-export const LeftBar = () => {
+export const LeftBar: React.FC = () => {
   return (
     <div className='left-wrapper'>
       <div className='bottom-bar'>
         <div className='button'>
-          <Icon component={DehazeSharp}></Icon>
+          <img src='/assets/icons/switch.svg'></img>
         </div>
         <div className='button'>
-          <Icon component={DomainSharp}></Icon>
+          <img src='/assets/icons/floor.svg'></img>
         </div>
         <div className='button'>
-          <Icon component={InfoSharp}></Icon>
-        </div>
-        <div className='button'>
-          <Icon component={ShareSharp}></Icon>
+          <img src='/assets/icons/share.svg'></img>
         </div>
       </div>
     </div>
