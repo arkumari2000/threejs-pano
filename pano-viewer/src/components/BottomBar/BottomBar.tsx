@@ -1,4 +1,10 @@
 import React from 'react';
+import { Icon } from '@material-ui/core';
+import {
+  CropSquareSharp,
+  VerticalSplitSharp,
+  InboxSharp,
+} from '@material-ui/icons';
 
 import './styles.css';
 
@@ -7,13 +13,13 @@ export const BottomBar: React.FC = () => {
     <div className='bottom-wrapper'>
       <div className='bottom-bar'>
         <div className='button'>
-          {/* <ion-icon name='square-outline' size='large' role='stop'></ion-icon> */}
+          <Icon component={CropSquareSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='pause-outline' size='large' role='split'></ion-icon> */}
+          <Icon component={VerticalSplitSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='cube-outline' size='large' role='cube'></ion-icon> */}
+          <Icon component={InboxSharp}></Icon>
         </div>
       </div>
     </div>

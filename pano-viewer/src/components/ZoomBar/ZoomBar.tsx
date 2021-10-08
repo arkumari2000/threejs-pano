@@ -1,4 +1,6 @@
 import React from 'react';
+import { Icon } from '@material-ui/core';
+import { Add, RemoveSharp } from '@material-ui/icons';
 import './styles.css';
 
 export const ZoomBar: React.FC = () => {
@@ -6,10 +8,10 @@ export const ZoomBar: React.FC = () => {
     <div className='zoom-wrapper'>
       <div className='bottom-bar zoom-bar'>
         <div className='button'>
-          {/* <ion-icon name='remove-outline' size='large' role='zoom-in'></ion-icon> */}
+          <Icon component={RemoveSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='add-outline' size='large' role='zoom-in'></ion-icon> */}
+          <Icon component={Add}></Icon>
         </div>
       </div>
     </div>

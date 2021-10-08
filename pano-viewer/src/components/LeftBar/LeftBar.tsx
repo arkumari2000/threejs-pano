@@ -1,22 +1,29 @@
 import React from 'react';
+import { Icon } from '@material-ui/core';
+import {
+  DehazeSharp,
+  DomainSharp,
+  InfoSharp,
+  ShareSharp,
+} from '@material-ui/icons';
 
 import './styles.css';
 
 export const LeftBar = () => {
   return (
-    <div className='left-wrapper' >
+    <div className='left-wrapper'>
       <div className='bottom-bar'>
         <div className='button'>
-          {/* <ion-icon name='reorder-four-outline' size='large' role='reorder'></ion-icon> */}
+          <Icon component={DehazeSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='podium-outline' size='large' role='architecture'></ion-icon> */}
+          <Icon component={DomainSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='information-circle-outline' size='large' role='info'></ion-icon> */}
+          <Icon component={InfoSharp}></Icon>
         </div>
         <div className='button'>
-          {/* <ion-icon name='share-social-outline' size='large' role='share'></ion-icon> */}
+          <Icon component={ShareSharp}></Icon>
         </div>
       </div>
     </div>
