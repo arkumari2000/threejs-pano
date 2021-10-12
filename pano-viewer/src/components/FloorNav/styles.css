@@ -1,0 +1,24 @@
+.floor-nav-wrapper {
+    position: fixed;
+    left: 18%;
+    top: 25%;
+    text-align: center;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+
+.floor-nav {
+    width: 328px;
+    text-align: left;
+    max-height: 484px;
+    overflow: scroll;
+}
+
+.nav-item {
+    padding: 10px 0px 16px 16px;
+}
+
+.nav-item:hover{
+    background-color: #8080807a;
+    cursor: pointer;
+}

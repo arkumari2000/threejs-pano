@@ -1,0 +1,15 @@
+.date-wrapper{
+    position: absolute;
+    left: 46%;
+    bottom: 100px;
+}
+
+.date-bar{
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.data-bar:hover{
+    background-color: #FF8000;
+}

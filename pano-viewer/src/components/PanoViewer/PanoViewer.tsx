@@ -5,6 +5,8 @@ import { BottomBar } from '../BottomBar/BottomBar';
 import { LeftBar } from '../LeftBar/LeftBar';
 import { useScene } from '../../hooks/useScene';
 import { Header } from '../Header/Header';
+import { DateBar } from '../DatebBar/DateBar';
+import { FloorNav } from '../FloorNav/FloorNav';
 
 export const PanoViewer: React.FC = () => {
   // debug info, will keep this react becomes stable
@@ -15,6 +17,8 @@ export const PanoViewer: React.FC = () => {
       <Header></Header>
       <ThreeCanvas scene={scene} camera={camera} />
       <LeftBar></LeftBar>
+      <FloorNav></FloorNav>
+      <DateBar></DateBar>
       <BottomBar></BottomBar>
     </>
   );
