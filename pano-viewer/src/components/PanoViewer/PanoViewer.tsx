@@ -17,8 +17,6 @@ export const PanoViewer: React.FC = () => {
       <Header></Header>
       <ThreeCanvas scene={scene} camera={camera} />
       <LeftBar></LeftBar>
-      <FloorNav></FloorNav>
-      <DateBar></DateBar>
       <BottomBar></BottomBar>
     </>
   );
